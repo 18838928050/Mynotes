@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define N 5  //这个地方的N是数组的长度
+int main()
+{
+double score[5][3]={
+
+            {12,33,55},
+            {12,33,55},
+            {12,33,55},
+            {12,33,55},
+            {12,33,55},
+    };
+    for(int i=0;i<5;i++)
+    {
+      for(int j=0;j<3;j++){
+         printf("%.2lf\t",*(score[i]+j));
+
+         //在一维数组中，score[i]=*(score+i);
+         //所以在二维数组中，score[i]就相当于score,score[i][j]=*(score[i]+j);
+      }
+printf("\n");    }
+
+
+
+}
