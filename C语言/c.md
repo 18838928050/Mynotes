@@ -16,7 +16,6 @@
     - [2.Cgroups](#2cgroups)
         + [2.1 Cgroups中的3个组件](#21-cgroups中的3个组件)
         + [2.2 Cgroup文件系统](#22-cgroup文件系统)
-## c的%d使用代码案例
 
 # 一.基础概念
 
