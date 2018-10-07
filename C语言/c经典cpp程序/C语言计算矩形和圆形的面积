@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>//引入数学公式
+void calcCircle();//圆形
+void calcRectangle();//矩形
+void calcCircle()
+{
+    double radius,s;//半径和面积
+    printf("请输入圆的半径：");
+    scanf("%lf",&radius);
+    s=3.14*pow(radius,2);
+    printf("圆的面积是：%lf\n",s);
+}
+void calcRectangle()
+{
+
+double width,height;
+double s;
+printf("请输入矩形的宽和高：");
+scanf("%lf%lf",&width,&height);
+s=width*height;
+printf("矩形的面积是：%.2lf\n",s);
+
+}
+int main()
+{
+//调用两个函数
+ calcCircle();
+calcRectangle();
+}
