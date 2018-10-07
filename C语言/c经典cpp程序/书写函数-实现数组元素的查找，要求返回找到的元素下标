@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+
+  //书写函数-实现数组元素的查找，要求返回找到的元素下标
+    int search();
+
+    int main()
+    {
+        int index=search();
+        printf("index的值是:%d\n",index);
+        return 0;
+    }
+    int search()
+    {
+        int nums[]={34,56,5,89,3};
+        int i;
+        //要查找的数字，所查找数字的下标，没找到index为-1
+        int searchNum;
+        int searchIndex=-1;
+        printf("请输入要查找的整型数字：");
+        scanf("%d",&searchNum);
+        for(i=0;i<5;i++)
+        {
+            if(searchNum==*(nums+i))
+            {
+                searchIndex=i;
+                break;
+            }
+    }//发将会查找到的元素下标
+    return searchIndex;
+}
