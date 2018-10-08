@@ -1,0 +1,27 @@
+package test;
+
+// public StringTokenizer(String str, String delim) 字符串，分隔符
+// countTokens()计算在生成异常之前可以调用此 tokenizer 的 nextToken 方法的次数。
+//StringTokenizer继承Enumeration接口，该接口重只有hasMoreElements和 nextElement()这两个方法
+//在StringTokenizer，该hasMoreElements返回值是hasmoreTokens，因此用两个方法返回值一样，一般用has
+//moreTokens,其实结果都一样
+//public int countTokens() ,此方法返回值是int
+//最重要的是public String nextToken() 这个方法，
+//nextToken()返回的值是str.substring(start, currentPosition);也就是当前result[i]的字符串值
+import java.util.StringTokenizer;
+
+public class saaa {
+public static void main(String[] args) {
+	String orgStr="ab,b,c,d,e,f";  
+    StringTokenizer  tokener = new StringTokenizer(orgStr,",");
+    String [] result = new String[tokener .countTokens()];//定义一个result数组，长度为使用nextToken方法的次数
+    int i=0;
+    while(tokener.hasMoreTokens())//等同于tokener.hasMoreElements
+         {
+           result[i++]=tokener.nextToken();//返回此 string tokenizer 的下一个标记。
+         }
+    for(int a = 0;a<result.length;a++){
+       System.out.print(result[a]+"\t");
+    }
+}
+}
