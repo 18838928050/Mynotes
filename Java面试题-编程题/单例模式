@@ -1,0 +1,26 @@
+饱汉模式
+//饱汉模式
+public class SingleTon {
+	public SingleTon() {
+		// TODO Auto-generated constructor stub
+	}
+  private static final SingleTon singleton=new SingleTon();
+  public SingleTon SingleTon() {
+	return singleton;
+	
+}
+	
+}
+
+
+
+//饿汉模式
+public class SingleTon2 {
+private static  SingleTon2 instance=null;
+public static synchronized SingleTon2 getInstance() {
+	if (instance==null) {
+		instance=new SingleTon2();
+	}
+	return instance;
+}
+}
