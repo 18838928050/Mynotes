@@ -1,0 +1,19 @@
+package tmm;
+
+import static org.junit.Assert.*;
+
+import org.apache.jasper.tagplugins.jstl.core.If;
+import org.junit.Test;
+
+public class ddd {
+	@Test
+	public void testName() throws Exception {
+		sss a=new sss();//子类
+		test b=new test();//父类  用来判断A是否是B的实例对象或者B子类的实例对象。如果是则返回true,否则返回false。
+		System.out.println(a instanceof test );
+		//instanceof前面是父类的实例或者是子类的实例对象，instanceof后面是父类(类）
+		
+	}
+	
+	
+}
