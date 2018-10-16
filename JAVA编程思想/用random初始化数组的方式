@@ -1,0 +1,30 @@
+/**
+ * 
+ */
+package com.example.demo;
+
+import java.util.Arrays;
+import java.util.Random;
+
+/**
+ @author： fu    @time：2018年10月16日 下午7:50:56 
+ @说明： 一份耕耘，一份收获
+**/
+public class test {
+	public static void main(String[] args) {
+		
+		Random random=new Random(47);
+		
+		Integer[] a=new Integer[random.nextInt(20)];
+		System.out.println("leng of a="+a.length);
+		for(int i=0;i<a.length;i++)
+			a[i]=random.nextInt(500);
+			System.out.print(Arrays.toString(a));
+		
+	}
+
+}
+
+这是控制台输出
+leng of a=18
+[55, 193, 361, 461, 429, 368, 200, 22, 207, 288, 128, 51, 89, 309, 278, 498, 361, 20]
