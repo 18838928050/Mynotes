@@ -1,12 +1,9 @@
-饱汉模式
-//饱汉模式
-public class SingleTon {
-	public SingleTon() {
-		// TODO Auto-generated constructor stub
-	}
-  private static final SingleTon singleton=new SingleTon();
-  public SingleTon SingleTon() {
-	return singleton;
+//饿汉式，之所以称为饿汉式，是因为这种类在静态初始化的时候自己被加载时就将自己实例化
+public sealed class SingleTon {   //sealed可以防止此类被继承
+	public SingleTon() { }
+  private static readonly final SingleTon instance=new SingleTon();  //readonly，只读，防止被更改
+  publicstatic SingleTon getInstance() {
+	return instance;
 	
 }
 	
@@ -14,7 +11,7 @@ public class SingleTon {
 
 
 
-//饿汉模式
+//懒汉模式，在第一次被引用时，才实例化，所以是懒汉式
 public class SingleTon2 {
 private static  SingleTon2 instance=null;
 public static synchronized SingleTon2 getInstance() {
